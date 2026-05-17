@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guilherme Henrike · Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0D0D0D;
+      --surface: #1A1A1A;
+      --border: #2A2A2A;
+      --text: #EFEFEB;
+      --text2: #888880;
+      --accent: #C8F04D;
+      --accent2: #A8D030;
+    }
+
+    body {
+      background: var(--bg);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .avatar {
+      width: 88px; height: 88px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-bottom: 1rem;
+      animation: pop 0.5s cubic-bezier(.22,.68,0,1.4) forwards;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.8); opacity: 0; }
+      to   { transform: scale(1);   opacity: 1; }
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+      text-align: center;
+    }
+
+    .bio {
+      font-size: 14px;
+      color: var(--text2);
+      text-align: center;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .link-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      font-family: 'Outfit', sans-serif;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      opacity: 0;
+      animation: slideUp 0.5s ease forwards;
+    }
+
+    .link-btn:hover {
+      border-color: var(--accent);
+      background: rgba(200,240,77,0.05);
+      transform: translateY(-2px);
+    }
+
+    .link-btn:nth-child(1) { animation-delay: 0.1s; }
+    .link-btn:nth-child(2) { animation-delay: 0.18s; }
+    .link-btn:nth-child(3) { animation-delay: 0.26s; }
+    .link-btn:nth-child(4) { animation-delay: 0.34s; }
+    .link-btn:nth-child(5) { animation-delay: 0.42s; }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .link-icon {
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px;
+      flex-shrink: 0;
+    }
+
+    .link-icon.green  { background: rgba(200,240,77,0.12); }
+    .link-icon.blue   { background: rgba(91,155,248,0.12); }
+    .link-icon.purple { background: rgba(167,139,250,0.12); }
+    .link-icon.orange { background: rgba(251,146,60,0.12); }
+    .link-icon.teal   { background: rgba(62,201,167,0.12); }
+
+    .link-label { flex: 1; }
+    .link-arrow { font-size: 14px; color: var(--text2); transition: color 0.2s; }
+    .link-btn:hover .link-arrow { color: var(--accent); }
+
+    .footer {
+      margin-top: 2.5rem;
+      font-size: 12px;
+      color: var(--text2);
+      opacity: 0.5;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <img src="foto.jpeg" style="width:88px;height:88px;border-radius:50%;object-fit:cover;"> 
+
+  <div class="name">Guilherme Henrike</div>
+  <div class="bio">Desenvolvedor Web em formação 🚀<br/>Vargem Grande Paulista, SP</div>
+
+  <div class="links">
+    <a class="link-btn" href="https://github.com/henrikeg554" target="_blank" rel="noopener">
+      <div class="link-icon green">🐙</div>
+      <span class="link-label">GitHub</span>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-btn" href="https://www.linkedin.com" target="_blank" rel="noopener">
+      <div class="link-icon blue">💼</div>
+      <span class="link-label">LinkedIn</span>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-btn" href="mailto:henrikeg554@gmail.com">
+      <div class="link-icon purple">✉️</div>
+      <span class="link-label">henrikeg554@gmail.com</span>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-btn" href="tel:+5511944799007">
+      <div class="link-icon orange">📞</div>
+      <span class="link-label">(11) 94479-9007</span>
+      <span class="link-arrow">↗</span>
+    </a>
+
+    <a class="link-btn" href="portfolio-guilherme-henrike.html">
+      <div class="link-icon teal">🌐</div>
+      <span class="link-label">Meu Portfólio</span>
+      <span class="link-arrow">↗</span>
+    </a>
+  </div>
+
+  <div class="footer">feito com HTML & CSS · @henrikeg554</div>
+
+</div>
+</body>
+</html>
