@@ -9,7 +9,7 @@ Página de links pessoais feita com HTML e CSS, no estilo Linktree.
 
 ## Como usar
 
-Baixe os arquivos e abra o `index.html` no navegador.
+Baixe os arquivos e abra no navegador.
 
 ## Autor
 
